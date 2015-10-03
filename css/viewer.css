@@ -1,10 +1,61 @@
 * {
 	margin: 0;
+	border: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
+html {
+	font-size: 20px;
+}
+
+body {
+	background: black;
+	color: white;
+}
+
+header {
+	height: 3em;
+}
+
+h1 {
+	display: none;
+	}
+	
+label {
+	display: none;
+	}
+	
+input, select {
+	height: 4rem;
+	background: transparent;
+	color: white;
+	font-size: 2rem;
+	}
+	
+header > div {
+	display: inline-block;
+}
+
+#browser input {
+	width: 80vw;
+	}
+	
+#filters select {
+	width: 15vw;
+	}
+
+select {
+
+	}	
+	
 iframe {
+	position: absolute;
+	left: 0;
+	bottom: 0;
 	width: 100vw;
-	height: 80vh;
+	height: calc(100vh - 4rem);
+	text-align: center; 
 }
 
 

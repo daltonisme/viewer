@@ -6,3 +6,8 @@ iframe {
 	width: 100vw;
 	height: 80vh;
 }
+
+
+.modification {
+	height: 0;
+}

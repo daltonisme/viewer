@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<header>
+		<title>Colourblindness viewer</title>
+		<meta charset='utf-8'>
+		<link  href='css/viewer.css' rel='stylesheet'>
+ 		<script src='js/browser.js'></script>
+ 		<script src='js/filters.js'></script>
+ 	</header>
+ 	<body>
+ 	
+ 		<h1>Viewer</h1>
+ 		
+ 		<form>
+ 			<label for='url'>URL:</label>
+        	<input id='url' type='url' onchange='update_content();'></input>
+		</form>
+		
+ 		<form>
+ 		 	<label for='filter'>Filter:</label>
+			<select id='filter' onchange='update_filter();'>
+				<option value='no-filter'>No filter</option>
+				<option value='filter1'>Filter 1</option>
+				<option value='filter2'>Filter 2</option>
+ 			</select>
+		</form>
+		
+		<iframe id='content'>Content</iframe>
+		
+	</body>
+</html>

@@ -13,6 +13,8 @@ function update_content() {
 		new RegExp('.*vimeo\.com/([0-9]+).*');
 	var test_youtube = // fix me
 		new RegExp('.*youtu(?:.be\/|be\.com\/watch\?v=)(.{8,})');
+	var test_image =
+		new RegExp('(.*\.jpg)');
 	
 	if (test_vimeo.test(url)) {
 		console.log('from Vimeo!');
@@ -21,6 +23,10 @@ function update_content() {
 	if (test_youtube.test(url)) {
 		console.log('from YouTube!');
 		var url = url.replace(test_youtube, 'https://www.youtube.com/embed/$1');
+	}
+	if (test_image.test(url)) {
+		console.log('that’s a picture!');
+		var url = url.replace(test_image, 'data:text/html,<html style="height:100%;background:url($1) center/contain no-repeat;"></html>');
 	}
 	
 	// display the content

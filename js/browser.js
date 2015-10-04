@@ -14,7 +14,7 @@ function update_content() {
 	var test_youtube = // fix me
 		new RegExp('.*youtu(?:.be\/|be\.com\/watch\?v=)(.{8,})');
 	var test_image =
-		new RegExp('(.*\.jpg)');
+		new RegExp('(.*\.(?:png|jpg|svg|gif))');
 	
 	if (test_vimeo.test(url)) {
 		console.log('from Vimeo!');
